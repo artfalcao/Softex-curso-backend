@@ -1,0 +1,164 @@
+ALGORITMO:
+    //Declarando variável do tipo booleano
+	resposta booleano;
+INICIO
+escreva("É terrestre?");
+leia(resposta);
+Se (resposta) entao
+    //Veículos Terrestres
+	escreva("Cabe apenas uma pessoa?");
+	leia(resposta);
+	Se (resposta) entao
+        //Veículo que cabe apenas uma pessoa
+		escreva ("É pesado?");
+		leia(resposta);
+		Se (resposta) entao
+            //Veículo que cabe apenas 1 pessoa + É pesado
+			escreva ("Então, o transporte escolhido foi: TRATOR.");
+		Senao
+			escreva ("Tem pedal?");
+			Se (resposta) então
+                //Veículo que cabe apenas 1 pessoa + tem pedal
+				escreva ("Então, o transporte escolhido foi: BICILCETA.");
+			FimSe
+		FimSe
+	Senao 
+        //Veículo que cabem mais de uma pessoa
+		escreva("Usa capacete?");
+		leia(resposta);
+		Se (resposta) entao 
+            //Veículo que cabem mais de 1 pessoa + usa capacete
+			escreva("Então, o transporte escolhido foi: MOTO.");
+	    Senao
+		    escreva("Tem passageiro?");
+		    leia (resposta);
+		    Se (resposta) entao 
+                //Veículo que cabem mais de 1 pessoa + tem passageiro
+			    escreva ("Usa trilho?");
+			    leia(resposta)
+			    Se (resposta) entao
+                    //Veículo que cabem mais de 1 pessoa + tem passageiro + usa trilho
+				    escreva("Então, o transporte escolhido foi: TREM.");
+		        Senao
+			        escreva("Anda na pista?");
+			        leia (resposta);
+			        Se (resposta) entao
+                    //Veículo que cabem mais de 1 pessoa + tem passageiro + anda na pista
+				        escreva ("É alto?");
+				        leia (resposta)
+				        Se (resposta) então
+                            //Veículo que cabem mais de 1 pessoa + tem passageiro + anda na pista + É alto
+					        escreva ("Usa carroceria?");
+					        leia (resposta);
+					        Se (resposta) entao
+                                //Veículo que cabem mais de 1 pessoa + tem passageiro + anda na pista + É alto + Usa carroceria
+						        escreva("Então, o transporte escolhido foi: CAMINHÃO");
+                            Senao
+                                escreva ("Pode ter cobrador?");
+                                leia (resposta);
+                                Se (resposta) entao
+                                    //Veículo que cabem mais de 1 pessoa + tem passageiro + anda na pista + É alto + pode ter cobrador
+                                    escreva ("Então, o transporte escolhido foi: ONIBUS");
+                                FimSe
+                            FimSe
+			            Senao
+				            escreva ("É veículo leve?");
+				            leia (resposta);
+					        Se (resposta) entao
+                            //Veículo que cabem mais de 1 pessoa + tem passageiro + anda na pista + É leve
+						        escreva ("Então, o transporte escolhido foi: CARRO");
+					        FimSe
+			            FimSe
+		            FimSe
+	            FimSe
+            FimSe
+        FimSe
+    FimSe
+Senao
+    escreva("É aéreo?");
+	leia(resposta)
+	Se (resposta) entao
+        //Veículos Aéreos
+		escreva("Precisa pular?");
+        leia (resposta);
+        Se (resposta) entao
+            //Veículos que precisam pular
+            escreva ("Então, o transporte escolhido foi: ASA DELTA.");
+        Senao
+            escreva ("Viaja dentro?");
+            leia (resposta);
+            Se (resposta) entao 
+                //Veículos que viajam dentro
+                escreva("É devagar?");
+                leia (resposta);
+                Se (resposta) entao
+                    //Veículos que viajam dentro + É devagar
+                    escreva ("Então, o transporte escolhido foi: BALÃO.");
+                Senao
+                    escreva("Tem piloto?");
+                    leia (resposta);
+                    Se (resposta) entao 
+                        //Veículos que viajam dentro + tem piloto
+                        escreva ("Tem asas fixas?");
+                        leia (resposta);
+                        Se (resposta) entao 
+                            //Veículos que viajam dentro + tem piloto + tem asas fixas
+                            escreva ("Então, o transporte escolhido foi: AVIÃO."); 
+                        Senao 
+                            escreva ("Faz voô vertical?");
+                            leia (resposta);
+                            Se (resposta) entao 
+                                //Veículos que viajam dentro + tem piloto + faz voô vertical
+                                escreva ("Então, o transporte escolhido foi: HELICÓPTERO."); 
+                            FimSe
+                        FimSe
+                    FimSe
+                FimSe
+            FimSe
+        FimSe
+    FimSe
+Senao
+    escreva ("É aquático?");
+    leia (resposta);  
+    Se (resposta) entao
+    //Veículos Aquáticos  
+        escreva ("É coberto de água?");
+        leia (resposta);
+         Se (resposta) entao
+            //Veículo coberto de água
+            escreva ("Então, o transporte escolhido foi: SUBMARINO.");
+        Senao   
+            escreva ("Navega na água?");
+            leia (resposta);
+            Se (resposta) entao
+                //Veículo que Navega na água
+                escreva ("Possui Vela?");
+                leia (resposta);
+                Se (resposta) entao
+                    //Veículo que Navega na água + possui vela
+                    escreva("Então, o transporte escolhido foi: BARCO.");
+                Senao 
+                    escreva ("Tem motor?");
+                    leia (resposta);
+                    Se (resposta) entao 
+                        //Veículo que Navega na água + tem motor
+                        escreva ("É alto?");
+                        leia (resposta);
+                        Se (resposta) entao 
+                            //Veículo que Navega na água + tem motor + É alto
+                            escreva("Então, o transporte escolhido foi: NAVIO.");
+                        Senao
+                            escreva ("Pode ser descoberto?");
+                            leia (resposta);
+                            Se (resposta) entao 
+                                //Veículo que Navega na água + tem motor + pode ser descoberto
+                                escreva("Então, o transporte escolhido foi: LANCHA.");
+                            FimSe
+                        FimSe
+                    FimSe
+                FimSe
+            FimSe
+        FimSe
+    FimSe
+FimSe
+FIM
