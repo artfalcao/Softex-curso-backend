@@ -10,5 +10,6 @@ Caso seja inserido um número de operação que não exista, o resultado deverá
 ## Para rodar o programa:
 Instalar a dependência prompt-sync:
 `npm i prompt-sync`
-Para rodar o programa você deve ter o node instalado na sua máquina:
+<br>
+Rodar o programa com o node:
 `node index.js`
