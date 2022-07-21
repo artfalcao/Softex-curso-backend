@@ -6,5 +6,6 @@ Caso o usuário não digite um número ou apareça um inválido no campo do ano,
 ## Para rodar o programa:
 Instalar a dependência prompt-sync:
 `npm i prompt-sync`
+<br>
 Para rodar o programa usando o Node:
 `node index.js`
