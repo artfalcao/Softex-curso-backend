@@ -15,5 +15,6 @@ Após a seleção, o sistema deve pedir para o usuário inserir o primeiro e seg
 ## Para rodar o programa:
 Instalar a dependência prompt-sync:
 `npm i prompt-sync`
+<br>
 Para rodar o programa você deve ter o node instalado na sua máquina:
 `node index.js`
