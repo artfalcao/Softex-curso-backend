@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Código 1</title>
+</head>
+<body>
+
+    <header>
+        <ul class="nav">
+            <li class=" link-pag"><a href="/index.html">Código 1</a></li>
+            <li class=" link-pag"><a href="./codigo2.html">Código 2</a></li>
+        </ul>
+
+    </header>
+
+    <div class="container">
+        <div class="conteudo">
+            <p class="notas">Nota 1:</p>
+            <input placeholder="Insira sua 1º nota" class="inputNota" type="number" name="nota1" id="nota1" min="0" max="10">
+        </div>
+
+        <div class="conteudo">
+            <p class="notas">Nota 2:</p>
+            <input placeholder="Insira sua 2º nota" class="inputNota" type="number" name="nota2" id="nota2" min="0" max="10">
+        </div>
+
+        <div class="conteudo">
+            <p class="notas">Nota 3:</p>
+            <input placeholder="Insira sua 3º nota" class="inputNota" type="number" name="nota3" id="nota3" min="0" max="10">
+        </div>
+
+        <button type="submit" id="btn-media" onclick="calculaMedia()">Calular Média</button>
+
+        <div class="conteudo">
+            <p class="resultado" id="exibeMedia"></p>
+        </div>
+    </div>
+
+
+
+    <script src="./js/codigo1.js"></script>
+    
+</body>
+</html>
