@@ -9,3 +9,8 @@ Instalar a dependência prompt-sync:
 <br>
 Para rodar o programa usando o Node:
 `node index.js`
+
+## Print do programa rodando em Nodejs
+<div>
+  <img src="https://user-images.githubusercontent.com/95629281/184508939-442b76ec-b740-4027-8a3a-78b1c8c8447e.JPG" width="900px" />
+</div>
