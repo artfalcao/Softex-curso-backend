@@ -38,6 +38,22 @@ class Server implements IComputador {
     cpu: number 
     type: string
 
+    get _ram() {
+        return this.ram
+    }
+
+    get _hd() {
+        return this.hd
+    }
+
+    get _cpu() {
+        return this.cpu
+    }
+
+    get _type() {
+        return this.type
+    }
+
     toString() {
         return `
             Ram: ${this.ram} GB; Hd: ${this.hd} GB; CPU: ${this.cpu} GHz; type: Server.
@@ -53,6 +69,22 @@ class Pc implements IComputador {
     hd: number 
     cpu: number 
     type: string
+
+    get _ram() {
+        return this.ram
+    }
+
+    get _hd() {
+        return this.hd
+    }
+
+    get _cpu() {
+        return this.cpu
+    }
+
+    get _type() {
+        return this.type
+    }
 
     toString() {
         return `
