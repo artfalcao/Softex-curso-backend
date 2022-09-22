@@ -1,97 +1,101 @@
-//Classe Abstrata Criadora - declara o método fábrica que deve retornar um objeto de uma classe produto
-abstract class FactoryComputador  {
-    //método abstrato
-    abstract criarComputador() : IComputador   
-}
+class Pc {
+    ram = 0
+    hd = 0
+    cpu = 0
 
+    getRam() {
+        return `${this.ram} GB`
+    }
 
-//Criadores Concretos - sobrescrevem o método fábrica para mudar o tipo de produto resultante.
-class ServerProduct extends FactoryComputador {
-    criarComputador(): IComputador {
-        return new Server
+    getHd() {
+        return `${this.hd} GB`
+    }
+
+    getCpu() {
+        return `${this.cpu} GHz`
+    }
+
+    setRam(value) {
+        this.ram = value
+    }
+
+    setHd(value) {
+        this.hd = value
+    } 
+
+    setCpu(value) {
+        this.cpu = value
+    }  
+
+    toString() {
+        return (this.getRam() + ', ' + this.getHd() + ', ' + this.getCpu())
     }
 }
 
+class Server {
+    ram = 0
+    hd = 0
+    cpu = 0
 
-//Criadores Concretos - sobrescrevem o método fábrica para mudar o tipo de produto resultante.
-class PcProduct extends FactoryComputador {
-    criarComputador(): IComputador {
-        return new Pc
-    }
-}
-
-
-//Interface Produto - declara as operações que todos os produtos concretos devem implementar.
-interface IComputador {
-    ram: number
-    hd: number 
-    cpu: number 
-    type: string
-    toString() 
-}
-
-
-//Produtos concretos - fornecem implementações da interface do produto.
-class Server implements IComputador {
-    ram: number
-    hd: number 
-    cpu: number 
-    type: string
-
-    get _ram() {
-        return this.ram
+    getRam() {
+        return `${this.ram} GB`
     }
 
-    get _hd() {
-        return this.hd
+    getHd() {
+        return `${this.hd} GB`
     }
 
-    get _cpu() {
-        return this.cpu
+    getCpu() {
+        return `${this.cpu} GHz`
     }
 
-    get _type() {
-        return this.type
+    setRam(value) {
+        this.ram = value
+    }
+
+    setHd(value) {
+        this.hd = value
+    } 
+
+    setCpu(value) {
+        this.cpu = value
     }
 
     toString() {
-        return `
-            Ram: ${this.ram} GB; Hd: ${this.hd} GB; CPU: ${this.cpu} GHz; type: Server.
-        `
-    }
-
-}
-
-
-//Produtos concretos - fornecem implementações da interface do produto.
-class Pc implements IComputador {
-    ram: number
-    hd: number 
-    cpu: number 
-    type: string
-
-    get _ram() {
-        return this.ram
-    }
-
-    get _hd() {
-        return this.hd
-    }
-
-    get _cpu() {
-        return this.cpu
-    }
-
-    get _type() {
-        return this.type
-    }
-
-    toString() {
-        return `
-            Ram: ${this.ram} GB; Hd: ${this.hd} GB; CPU: ${this.cpu} GHz; type: Pc.
-        `
+        return (this.getRam() + ', ' + this.getHd() + ', ' + this.getCpu())
     }
 }
+
+class CreateComputer{
+    createComputer(type){
+        if (type === 'pc') {
+            return new Pc()
+        }
+        
+        if (type === 'server') {
+            return new Server()
+        }
+    }
+}
+
+//TESTANDO
+const createComp = new CreateComputer()
+const pc = createComp.createComputer('pc')
+const server = createComp.createComputer('server')
+console.log('-----PC------')
+console.log(pc.getRam())
+console.log('-----SERVER------')
+console.log(server.toString())
+pc.setRam(10)
+pc.setHd(5)
+pc.setCpu(3)
+server.setRam(100)
+server.setHd(50)
+server.setCpu(30)
+console.log('-----PC------')
+console.log(pc.toString())
+console.log('-----SERVER------')
+console.log(server.toString())
 
 
 
